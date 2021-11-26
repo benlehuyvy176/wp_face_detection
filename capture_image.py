@@ -2,7 +2,6 @@ import numpy as np
 import cv2
 import time
 import os
-import time
 
 # Label your name here
 label = "Dong"
@@ -21,6 +20,7 @@ while(True):
 
     # Show frame
     cv2.imshow('frame',frame)
+
     # Save data to folder
     if i>=100 and i<=1100: #capture 1000 frames
         print("Number of photos capture = ",i-100)
@@ -29,12 +29,7 @@ while(True):
             os.mkdir('data' + str(label))
 
         cv2.imwrite('data' + str(label) + "/" + str(i) + ".png",frame)
-        # Timer
-        timer = 2
-        print(f'Wait {timer} seconds')
-        time.sleep(timer)
-    # Set break point if capture i pictures, enable the below code:
-    # if (cv2.waitKey(1) & 0xFF == ord('q')) | (i == 20):
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
