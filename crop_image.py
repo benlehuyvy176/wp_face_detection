@@ -109,7 +109,7 @@ def crop_bounding_boxes(frame, boxes, dir):
 
         # Crop frame
         crop_img = frame[(topleft_y-15):(topleft_y+height+15),(topleft_x-10):(topleft_x+width+10)]
-        now = datetime.now().strftime("%H%M%S")
+        now = datetime.now().strftime("%H%M%S_%f")
         img_name = os.path.join(dir,f'{now}.jpg')
         cv2.imwrite(img_name, crop_img) # Save cropped image
 
