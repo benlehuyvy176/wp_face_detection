@@ -1,4 +1,4 @@
-# WP_Face_Detection
+# Facial_Recognition
 Group project for CoderSchool ML course
 
 Aim: Detect, locate & recognize human face using YOLO and OpenCV
